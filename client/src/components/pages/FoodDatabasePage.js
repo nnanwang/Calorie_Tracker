@@ -4,32 +4,38 @@ import { fetchFoods } from '../../api/apiService';
 
 function FoodDatabasePage() {
     const [foods, setFoods] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        const loadData = async () => {
+        const loadFoods = async () => {
             try {
                 const data = await fetchFoods();
                 setFoods(data);
-            } catch (error) {
-                console.log('Error fetching food data:', error);
+                setLoading(false);
+            } catch (err) {
+                setError('Failed to fetch food data');
+                setLoading(false);
             }
         };
 
-        loadData();
+        loadFoods();
     }, []);
 
-    return (
-        <div>
-            <h1>Food Database</h1>
-            <ul>
-                {foods.map(food => (
-                    <li key={food.id}>{food.name} - {food.calories} calories</li>
-                ))}
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>{error}</p>;
 
-            </ul>
-        </div>
+    return (
+        <ul>
+            {foods.map((food) => (
+                <li key={food.id}>
+                    {food.name} - {food.calories} calories
+                </li>
+            ))}
+        </ul>
     );
-}
+};
+
 
 export default FoodDatabasePage;
 

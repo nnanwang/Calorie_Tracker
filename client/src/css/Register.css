@@ -1,0 +1,116 @@
+/* Register.css */
+
+.register-container {
+  max-width: 500px;
+  margin: 50px auto; /* Centers the container and adds vertical spacing */
+  padding: 30px;
+  background-color: #f9fbf4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #28a745;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-container .form-group {
+  margin-bottom: 20px;
+}
+
+.register-container .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.register-container .form-group input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the total width */
+  }
+
+.register-container .form-group input:focus {
+  border-color: #91f675;
+  outline: none;
+}
+
+.register-container .error {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.register-container button {
+  padding: 12px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-container button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.register-container .message {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+  color: #28a745;
+}
+
+/* Right navigation */
+.nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-right a,
+  .nav-right button {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 15px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-right a:hover,
+  .nav-right button:hover {
+    color: #d4d4d4;
+  }
+  
+  .nav-right .welcome-message {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .logout-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .logout-button:hover {
+    color: #d4d4d4;
+  }

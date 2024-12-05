@@ -1,0 +1,43 @@
+/* Header.css */
+
+/* Style the header container */
+header {
+    padding: 20px 0;           /* Vertical padding */
+   
+  }
+  
+  /* Style the navigation bar */
+  header nav {
+    display: flex;
+    justify-content: center;   /* Center the navigation items */
+    flex-wrap: wrap;           /* Allow wrapping on smaller screens */
+  }
+  
+  /* Style the links inside the navigation bar */
+  header nav a {
+    color: rgb(57, 57, 57);             /* White text color */
+    text-decoration: none;     /* Remove underline from links */
+    font-weight: bold;
+    margin: 0px 15px;            /* Horizontal spacing between links */
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for links */
+  header nav a:hover {
+    color:  #28a745;;
+    text-decoration: underline;
+    
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    header nav {
+      flex-direction: column;  /* Stack links vertically */
+    }
+  
+    header nav a {
+      margin: 10px 0;          /* Vertical spacing between links */
+    }
+  }
+  

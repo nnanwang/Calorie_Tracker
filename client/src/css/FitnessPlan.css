@@ -1,0 +1,87 @@
+.fitness-plan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 100;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.calorie-label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.calorie-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #7ab31f;
+    color: white;
+}
+
+.submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.loading-spinner {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.fitness-plan-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.fitness-plan-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.fitness-plan-content {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
