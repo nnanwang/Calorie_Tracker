@@ -11,14 +11,6 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const path = require('path');
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client', 'build')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-  });
-}
-
 // Middleware
 app.use(cors({
   origin: 'http://localhost:3000', // Replace with your React app's URL if different
